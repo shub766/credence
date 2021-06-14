@@ -29,6 +29,7 @@ router.get('/', async(req,res) => {
 router.post('/',upload.single('authorimage'), async(req,res) => {
     console.log(req.file);
     console.log(req)
+    console.log(req.authorimage)
     const author = new Author({
         name:req.body.name,
         authorimage:req.file.path,
